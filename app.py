@@ -23,6 +23,11 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import logging
 
+# === RAILWAY FIXES (ADD THIS) ===
+PORT = int(os.environ.get("PORT", 5000))
+os.environ["PLAYWRIGHT_BROWSERS_PATH"] = "/opt/playwright"
+# === END RAILWAY FIXES ===
+
 # Install missing packages
 try:
     import requests
