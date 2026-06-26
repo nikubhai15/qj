@@ -971,5 +971,5 @@ if __name__ == "__main__":
     import atexit
     atexit.register(close_shared_browser)
     
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port, debug=False, threaded=True)
+    # PORT is already defined at the top
+    app.run(host='0.0.0.0', port=PORT, debug=False, threaded=True)
