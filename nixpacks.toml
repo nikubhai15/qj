@@ -1,9 +1,19 @@
-# nixpacks.toml
+[variables]
+PYTHON_VERSION = "3.12"
+
 [phases.setup]
-nixPkgs = ["python312", "python312Packages.pip", "python312Packages.venv", "chromium"]
+nixPkgs = [
+  "python312",
+  "python312Packages.pip",
+  "chromium"
+]
 
 [phases.install]
-cmds = ["pip install -r requirements.txt", "playwright install chromium"]
+cmds = [
+  "python -m pip install --upgrade pip setuptools wheel",
+  "pip install -r requirements.txt",
+  "playwright install chromium"
+]
 
 [start]
 cmd = "python app.py"
