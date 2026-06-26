@@ -1,5 +1,3 @@
-pip install --upgrade pip
-pip install --upgrade setuptools wheel
-pip install -r requirements.txt --ignore-dependencies
-pip install playwright==1.46.0 greenlet==3.0.3
+pip install -U pip setuptools wheel
+pip install -r requirements.txt
 playwright install chromium
