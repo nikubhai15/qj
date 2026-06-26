@@ -28,25 +28,9 @@ PORT = int(os.environ.get("PORT", 5000))
 # === END RAILWAY FIXES ===
 
 # Install missing packages
-try:
-    import requests
-except ImportError:
-    os.system('pip install requests')
-    import requests
-
-try:
-    from playwright.sync_api import sync_playwright
-except ImportError:
-    os.system('pip install playwright')
-    os.system('playwright install chromium')
-    from playwright.sync_api import sync_playwright
-
-try:
-    from bs4 import BeautifulSoup
-except ImportError:
-    os.system('pip install beautifulsoup4')
-    from bs4 import BeautifulSoup
-
+import requests
+from playwright.sync_api import sync_playwright
+from bs4 import BeautifulSoup
 
 app = Flask(__name__)
 CORS(app)
