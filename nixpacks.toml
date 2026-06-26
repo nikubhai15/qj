@@ -1,16 +1,27 @@
-[variables]
-PYTHON_VERSION = "3.12"
-
 [phases.setup]
 nixPkgs = [
   "python312",
-  "python312Packages.pip",
-  "chromium"
+  "chromium",
+  "nss",
+  "nspr",
+  "atk",
+  "at-spi2-atk",
+  "cups",
+  "dbus",
+  "libdrm",
+  "gtk3",
+  "xorg.libX11",
+  "xorg.libXcomposite",
+  "xorg.libXdamage",
+  "xorg.libXext",
+  "xorg.libXfixes",
+  "xorg.libXrandr",
+  "xorg.libxcb",
+  "mesa"
 ]
 
 [phases.install]
 cmds = [
-  "python -m pip install --upgrade pip setuptools wheel",
   "pip install -r requirements.txt",
   "playwright install chromium"
 ]
