@@ -15,7 +15,7 @@ import sys
 import os
 import csv
 import threading
-from concurrent.futures import ThreadPoolExecutor, TimeoutError as FuturesTimeoutError
+from concurrent.futures import ThreadPoolExecutor, TimeoutError as FuturesTimeoutError, as_completed
 from urllib.parse import urlparse, parse_qs, urlencode
 from datetime import datetime
 from flask import Flask, request, jsonify
