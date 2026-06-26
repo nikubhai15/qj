@@ -1,3 +1,3 @@
 #!/bin/bash
-pip install -r requirements.txt
-playwright install chromium
+greenlet>=3.1.0
+playwright==1.46.0
